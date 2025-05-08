@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -50,6 +51,7 @@ interface Profile {
   email?: string;
 }
 
+const navigate = useNavigate();
 const GroupManagementPage = () => {
   const { user } = useAuth();
   const [groups, setGroups] = useState<Group[]>([]);
@@ -628,15 +630,13 @@ const GroupManagementPage = () => {
                 </div>
               </CardContent>
               <CardFooter className="flex flex-wrap justify-between gap-2">
-                <Button
-                  variant="outline" 
-                  onClick={() => {
-                    window.location.href = `/chat/${group.id}`;
-                  }}
-                  className="border-terminal-border text-terminal-foreground hover:bg-terminal"
-                >
-                  Open Terminal
-                </Button>
+              <Button
+                variant="outline"
+                onClick={() => navigate(`/chat/${group.id}`)}
+                className="border-terminal-border text-terminal-foreground hover:bg-terminal"
+              >
+                Open Terminal
+              </Button>
                 
                 <div className="flex space-x-2">
                   {/* Invite button */}
