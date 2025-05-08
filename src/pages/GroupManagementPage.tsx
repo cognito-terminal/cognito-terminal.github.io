@@ -51,8 +51,9 @@ interface Profile {
   email?: string;
 }
 
-const navigate = useNavigate();
+
 const GroupManagementPage = () => {
+  const navigate = useNavigate();
   const { user } = useAuth();
   const [groups, setGroups] = useState<Group[]>([]);
   const [loading, setLoading] = useState(false);
