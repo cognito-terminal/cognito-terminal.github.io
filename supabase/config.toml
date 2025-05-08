@@ -1,0 +1,6 @@
+
+project_id = "fzthcbbzuzvxqasidgrv"
+
+[storage]
+[storage.media]
+public = true

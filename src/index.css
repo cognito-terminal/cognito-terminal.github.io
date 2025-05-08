@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 100% 3%;
+    --foreground: 120 100% 50%;
+
+    --card: 120 100% 3%;
+    --card-foreground: 120 100% 50%;
+
+    --popover: 120 100% 3%;
+    --popover-foreground: 120 100% 50%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 3%;
+
+    --secondary: 120 25% 15%;
+    --secondary-foreground: 120 100% 50%;
+
+    --muted: 120 25% 12%;
+    --muted-foreground: 120 70% 40%;
+
+    --accent: 120 25% 15%;
+    --accent-foreground: 120 100% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 120 100% 50%;
+
+    --border: 120 25% 15%;
+    --input: 120 25% 15%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.25rem;
+    
+    /* Sidebar variables */
+    --sidebar-background: 120 100% 3%;
+    --sidebar-foreground: 120 100% 50%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 120 100% 3%;
+    --sidebar-accent: 120 25% 15%;
+    --sidebar-accent-foreground: 120 100% 50%;
+    --sidebar-border: 120 25% 15%;
+    --sidebar-ring: 120 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-terminal text-terminal-foreground font-mono;
+  }
+}
+
+@layer utilities {
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    @apply bg-terminal-muted;
+  }
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-terminal-foreground/50 hover:bg-terminal-foreground;
+  }
+  .cursor::after {
+    content: '|';
+    @apply animate-cursor-blink ml-0.5;
+  }
+}
