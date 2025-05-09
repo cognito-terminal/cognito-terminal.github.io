@@ -50,7 +50,7 @@ const RegisterPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="hackerman"
+            placeholder=""
           />
         </div>
         
@@ -66,7 +66,7 @@ const RegisterPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="operative@cognito.net"
+            placeholder=""
           />
         </div>
         
@@ -82,7 +82,7 @@ const RegisterPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="************"
+            placeholder=""
           />
         </div>
         
@@ -98,7 +98,7 @@ const RegisterPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="************"
+            placeholder=""
           />
         </div>
         

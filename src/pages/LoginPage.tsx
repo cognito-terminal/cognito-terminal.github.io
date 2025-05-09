@@ -37,7 +37,7 @@ const LoginPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="operative@cognito.net"
+            placeholder=""
           />
         </div>
         
@@ -53,7 +53,7 @@ const LoginPage = () => {
             onChange={handleChange}
             required
             className="w-full bg-terminal border border-terminal-border text-terminal-foreground"
-            placeholder="************"
+            placeholder=""
           />
         </div>
         
